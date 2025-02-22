@@ -9,8 +9,7 @@ const app = express();
 const server = http.createServer(app);
 
 // socket.io ws server
-const io = new Server();
-io.attach(server);
+const io = new Server(server);
 
 // express middleware
 app.use(express.json());

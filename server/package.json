@@ -2,7 +2,7 @@
   "name": "agoracode-server",
   "version": "0.0.1",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "tsc; node dist/index.js",
     "build": "tsc",
@@ -34,6 +34,7 @@
     "@types/morgan": "^1.9.9",
     "bufferutil": "^4.0.9",
     "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.1",
     "morgan": "^1.10.0",
