@@ -7,15 +7,22 @@ import { Server } from "socket.io";
 import { rateLimit } from "express-rate-limit";
 import { ApiResponse } from "./lib/ApiResponse";
 
-// http server
+/**
+ * Http Express Server
+ */
 const app = express();
 const server = http.createServer(app);
 
-// socket.io ws server
+/**
+ * Socket io server
+ */
 const io = new Server(server);
 io.attach(server);
 
-// rate limiter
+
+/**
+ * Rate limiter configuration
+ */
 const limiter = rateLimit({
   windowMs: 1000 * 60,
   limit: 60,
@@ -24,17 +31,23 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
-// express middleware
+/**
+ * middlewares
+ */
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(limiter);
 
-// router imports
+/**
+ * Router imports
+ */
 import fileRouter from "./routes/files.routes"
 import workspaceRouter from "./routes/workspace.routes"
 
-// route handlers
+/**
+ * Router handlers
+ */
 app.use("/file", fileRouter);
 app.use("/workspace", workspaceRouter);
 
