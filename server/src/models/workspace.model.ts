@@ -10,4 +10,4 @@ const WorkspaceSchema = new Schema(
 );
 
 export default mongoose.models.Workspaces ||
-  mongoose.model("Workspaces", WorkspaceSchema);
+  mongoose.model("workspaces", WorkspaceSchema);
