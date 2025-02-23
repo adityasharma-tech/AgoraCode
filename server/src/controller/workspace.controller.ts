@@ -76,4 +76,5 @@ export {
   getWorkspaceById,
   getWorkspacesByCid,
   updateWorkspaceName,
+  deleteWorkspace,
 };

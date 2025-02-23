@@ -31,7 +31,11 @@ app.use(morgan("dev"));
 app.use(limiter);
 
 // router imports
+import fileRouter from "./routes/files.routes"
+import workspaceRouter from "./routes/workspace.routes"
 
 // route handlers
+app.use("/file", fileRouter);
+app.use("/workspace", workspaceRouter);
 
 export default server;
