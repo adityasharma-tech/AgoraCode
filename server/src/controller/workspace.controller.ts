@@ -5,6 +5,10 @@ import { asyncHandler } from "../lib/asyncHandler";
 import { areValuesValid } from "../lib/utils";
 import WorkspaceModel from "../models/workspace.model";
 
+
+/**
+ Create new workspace
+ */
 const createWorkspace = asyncHandler(async (req, res) => {
   const workspace = await WorkspaceModel.insertOne({
     cid: req.user.id,
@@ -20,6 +24,9 @@ const createWorkspace = asyncHandler(async (req, res) => {
     );
 });
 
+/**
+ get any workspace by its object Id
+ */
 const getWorkspaceById = asyncHandler(async (req, res) => {
   if (!areValuesValid(req.params.id))
     throw new ApiError(400, "Please provide workspace ID in params.");

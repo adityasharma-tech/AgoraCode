@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { logger } from "../lib/configs";
 
-export default async function connectDb() {
+export default async function connectToMongoDb() {
   try {
       await mongoose.connect(`${process.env.MONGO_URI!}`, {
         retryWrites: true,
