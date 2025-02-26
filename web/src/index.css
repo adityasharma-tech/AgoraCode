@@ -10,3 +10,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+button {
+  @apply cursor-pointer disabled:opacity-80 cursor-not-allowed
+}
