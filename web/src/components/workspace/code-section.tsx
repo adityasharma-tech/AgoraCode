@@ -1,5 +1,10 @@
+import OpenFileTabs from "./open-file-tabs";
+
 export default function CodeSection() {
   return (
-    <div>CodeSection</div>
+    <section>
+      <OpenFileTabs/>
+    </section>
   )
 }
+

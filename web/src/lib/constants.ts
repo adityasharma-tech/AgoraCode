@@ -36,3 +36,13 @@ export const demoFilesData:FileItemPropT [] = [
     updatedAt: new Date(),
   })),
 ];
+
+export const demoOpenFiles:FileItemPropT [] = [
+  ...Array.from({ length: 3 }).map(() => ({
+    _id: crypto.randomUUID(),
+    filepath: `/path/to/file${Math.floor(Math.random() * 10000)}.txt`,
+    content: `File content ${Math.random().toString(36).substring(2, 15)}`,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  })),
+];

@@ -7,6 +7,7 @@ export default function Workspace() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  // 0b0e14
   if (!id) navigate("/");
   return (
     <DragDivider
