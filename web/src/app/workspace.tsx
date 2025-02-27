@@ -11,7 +11,7 @@ export default function Workspace() {
   if (!id) navigate("/");
   return (
     <DragDivider
-      className="w-screen h-screen bg-[#0b0e14]"
+      className="w-screen h-screen overflow-hidden bg-[#0b0e14]"
       element1={<DirectorySection workspaceTitle={"Git & Github Part 2"}/>}
       element2={<CodeSection />}
     />
