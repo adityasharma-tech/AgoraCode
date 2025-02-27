@@ -11,6 +11,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  @apply dark:bg-neutral-900 bg-neutral-900
+}
+
 button {
   @apply cursor-pointer disabled:opacity-80 cursor-not-allowed
 }

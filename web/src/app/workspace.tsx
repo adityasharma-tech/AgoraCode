@@ -1,14 +1,18 @@
 import { useNavigate, useParams } from "react-router";
+import DragDivider from "../components/workspace/drag-divider";
+import DirectorySection from "../components/workspace/directory-section";
+import CodeSection from "../components/workspace/code-section";
 
 export default function Workspace() {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  
   if (!id) navigate("/");
-  return <main className="w-screen h-screen bg-[#0b0e14] flex flex-col">
-    <div></div>
-    <div></div>
-    <div></div>
-  </main>;
+  return (
+    <DragDivider
+      className="w-screen h-screen bg-[#0b0e14]"
+      element1={<DirectorySection workspaceTitle={"Git & Github Part 2"}/>}
+      element2={<CodeSection />}
+    />
+  );
 }

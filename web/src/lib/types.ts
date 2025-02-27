@@ -6,3 +6,11 @@ export type WorkspaceItemPropT = {
     createdAt: Date;
     updatedAt: Date;
 }
+
+export type FileItemPropT = {
+  _id: string;
+  filepath: string;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
